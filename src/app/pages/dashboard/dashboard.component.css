@@ -1,0 +1,21 @@
+img{
+    border-radius: 100px;
+}
+
+.myRow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prueba{
+    min-height: 250px;
+
+    /* flex-grow: 1; */
+}
+
+@media screen and (max-width: 767px){
+    
+    #foto{
+        display: none;
+    }
+}

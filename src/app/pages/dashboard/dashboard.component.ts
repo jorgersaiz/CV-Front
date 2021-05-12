@@ -1,16 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styles: [
+  styleUrls: [
+    "./dashboard.component.css"
   ]
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario
+  height1: string
+  constructor(private usuarioService: UsuarioService) { 
+    
+    
+  }
 
+  
+  getUsuario(){
+    this.usuarioService.getUsuario().subscribe((data: any) => {
+      this.usuario = data.usuario
+      console.log(this.usuario);
+      
+      
+    })
+  }
   ngOnInit(): void {
+    this.getUsuario()
   }
 
 }

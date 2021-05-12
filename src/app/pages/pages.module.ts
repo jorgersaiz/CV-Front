@@ -13,6 +13,10 @@ import { ComponentsModule } from '../components/components.module';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { TecnologiasComponent } from './tecnologias/tecnologias.component';
+import { ExperienciasComponent } from './experiencias/experiencias.component';
+import { EstudiosComponent } from './estudios/estudios.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 
 
@@ -24,7 +28,11 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     PagesComponent,
     AccountSettingsComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    TecnologiasComponent,
+    ExperienciasComponent,
+    EstudiosComponent,
+    ProyectosComponent
   ],
   exports: [
     DashboardComponent,

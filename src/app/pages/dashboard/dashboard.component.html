@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<div class="row">
+    
+    <div class="col" >
+
+        <div class="card prueba" id="card2">
+            <div class="card-body" style="display: flex; align-items: center;">
+
+                <div>
+
+                    <h3>{{usuario?.nombre}} {{usuario?.apellidos}}</h3>
+                
+                    <ul>
+                        <li>Email : {{usuario?.email}}</li>
+                        <li>Teléfono : {{usuario?.telefono}}</li>
+                        <li>LinkedIn : {{usuario?.linkedIn}}</li>
+                        <li>GitHub : {{usuario?.gitHub}}</li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col" id="foto">
+
+        <div class="card prueba">
+            <div class="card-body" style="display: flex; justify-content: center;">
+
+                <img src="{{usuario?.imagen}}" alt="">
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col">
+
+        <div class="card">
+            <div class="card-body">
+                <ul *ngFor="let parrafo of usuario?.resumen">
+
+                    <li>{{parrafo}}</li>
+                    
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

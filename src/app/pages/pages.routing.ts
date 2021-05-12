@@ -7,6 +7,10 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { TecnologiasComponent } from './tecnologias/tecnologias.component';
+import { ExperienciasComponent } from './experiencias/experiencias.component';
+import { EstudiosComponent } from './estudios/estudios.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 const routes: Routes = [
 
@@ -17,12 +21,16 @@ const routes: Routes = [
         component: PagesComponent,
         children: [
           // En principio, estas serán rutas protegidas, es decir, solo se puede acceder una vez logueado
-          { path: '', component: DashboardComponent, data: {titulo : "Dashboard"}},  
+          { path: '', component: DashboardComponent, data: {titulo : "Resumen"}},  
           { path: 'progress', component: ProgressComponent, data: {titulo : "Progress"}},
           { path: 'grafica1', component: Grafica1Component, data: {titulo : "Grafica"}},
           { path: 'account-settings', component: AccountSettingsComponent, data: {titulo : "Account-Settings"}},
           { path: 'promesas', component: PromesasComponent, data: {titulo : "Promesas"}},
-          { path: 'rxjs', component: RxjsComponent, data: {titulo : "Observables"}}
+          { path: 'rxjs', component: RxjsComponent, data: {titulo : "Observables"}},
+          { path: 'tecnologias', component: TecnologiasComponent, data: {titulo : "Tecnologías"}},
+          { path: 'experiencias', component: ExperienciasComponent, data: {titulo : "Experiencia Laboral"}},
+          { path: 'estudios', component: EstudiosComponent, data: {titulo : "Estudios"}},
+          { path: 'proyectos', component: ProyectosComponent, data: {titulo : "Proyectos"}}
     
         ] 
     },
