@@ -116,46 +116,26 @@
                     <div class="dropdown-menu mailbox dropdown-menu-right animated fadein" aria-labelledby="2">
                         <ul>
                             <li>
-                                <div class="drop-title">You have 4 new messages</div>
+                                <div class="drop-title">Recibe mi CV en PDF</div>
                             </li>
                             <li>
                                 <div class="message-center">
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="./assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                        <div class="mail-contnet">
-                                            <h5>Pavan kumar</h5> 
-                                            <span class="mail-desc">Just see the my admin!</span> 
-                                            <span class="time">9:30 AM</span> 
+                                    
+                                    <form class="col" style="margin-bottom: 15px; margin-top: 15px;">
+                                        <div class="form-group">
+                                          <label for="inputEmail">Email</label>
+                                          <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="Email" #email>
+                                          <small id="emailHelp" class="form-text text-muted" style="font-size: 10px;">Tu email no se guardará en ninguna base de datos ni recibirás spam de ningún tipo.</small>
                                         </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="./assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
-                                        <div class="mail-contnet">
-                                            <h5>Sonu Nigam</h5> 
-                                            <span class="mail-desc">I've sung a song! See you at</span> 
-                                            <span class="time">9:10 AM</span> 
+                                        <div class="form-group">
+                                          <label for="inputName">Nombre completo</label>
+                                          <input type="text" class="form-control form-control-sm" id="inputName" placeholder="Nombre completo" #name>
                                         </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="./assets/images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
-                                        <div class="mail-contnet">
-                                            <h5>Arijit Sinh</h5> 
-                                            <span class="mail-desc">I am a singer!</span> 
-                                            <span class="time">9:08 AM</span> 
+                                        <button type="button" class="btn btn-primary" (click)="onSub(email.value, name.value)">Enviar</button>
+                                        <div class="spinner-border" role="status" *ngIf="correo == false">
+                                            <span class="sr-only">Loading...</span>
                                         </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="./assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                        <div class="mail-contnet">
-                                            <h5>Pavan kumar</h5> 
-                                            <span class="mail-desc">Just see the my admin!</span> 
-                                            <span class="time">9:02 AM</span> 
-                                        </div>
-                                    </a>
+                                    </form>
                                 </div>
                             </li>
                             <li>
@@ -174,39 +154,28 @@
                 <!-- Language -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-us"></i></a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-es"></i></a>
                     <div class="dropdown-menu dropdown-menu-right animated fadein"> 
                         <a class="dropdown-item" href="#">
-                            <i class="flag-icon flag-icon-in"></i> 
-                            India
+                            <i class="flag-icon flag-icon-us"></i> 
+                            United States
                         </a> 
-                        <a class="dropdown-item" href="#">
-                            <i class="flag-icon flag-icon-fr"></i> 
-                            French
-                        </a> 
-                        <a class="dropdown-item" href="#">
-                            <i class="flag-icon flag-icon-cn"></i> 
-                            China
-                        </a>                                
-                        <a class="dropdown-item" href="#">
-                            <i class="flag-icon flag-icon-de"></i> 
-                            Dutch</a> 
-                        </div>
+                    </div>
                 </li>
                 <!-- ============================================================== -->
                 <!-- Profile -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{usuario?.imagen}}" alt="user" class="profile-pic" /></a>
                     <div class="dropdown-menu dropdown-menu-right animated fadein">
                         <ul class="dropdown-user">
                             <li>
                                 <div class="dw-user-box">
-                                    <div class="u-img"><img src="./assets/images/users/1.jpg" alt="user"></div>
+                                    <div class="u-img"><img src="{{usuario?.imagen}}" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>Steave Jobs</h4>
-                                        <p class="text-muted">varun@gmail.com</p>
-                                        <a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                                        <h4>{{usuario?.nombre}} {{usuario?.apellidos}}</h4>
+                                        <p class="text-muted">{{usuario?.email}}</p>
+                                        <a routerLink="/dashboard" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>

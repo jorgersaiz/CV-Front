@@ -1,0 +1,14 @@
+.short{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .large, .tipo{
+        display: none;
+    }
+
+    .short{
+        display: block;
+    }
+
+}

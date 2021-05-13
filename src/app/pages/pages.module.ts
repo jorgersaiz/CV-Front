@@ -33,6 +33,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     ExperienciasComponent,
     EstudiosComponent,
     ProyectosComponent
+    
   ],
   exports: [
     DashboardComponent,

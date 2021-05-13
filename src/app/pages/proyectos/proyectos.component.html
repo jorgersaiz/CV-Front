@@ -1,1 +1,15 @@
-<p>proyectos works!</p>
+<div class="row" *ngFor="let proyecto of proyectos">
+    <div class="col centrar" >
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{proyecto.titulo}}</h5>
+                <p class="card-text">{{proyecto.descripcion}}</p>
+                <a href="{{proyecto.github[0]}}" class="btn btn-outline-dark">
+                    <i class="fab fa-github" style="font-size: 20px;"></i> 
+                    Link a GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

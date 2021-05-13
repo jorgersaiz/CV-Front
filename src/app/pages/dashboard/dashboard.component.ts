@@ -17,13 +17,10 @@ export class DashboardComponent implements OnInit {
     
     
   }
-
   
   getUsuario(){
     this.usuarioService.getUsuario().subscribe((data: any) => {
       this.usuario = data.usuario
-      console.log(this.usuario);
-      
       
     })
   }

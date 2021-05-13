@@ -5,7 +5,8 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
 @Component({
   selector: 'app-experiencias',
   templateUrl: './experiencias.component.html',
-  styles: [
+  styleUrls: [
+    './experiencias.component.css'
   ]
 })
 export class ExperienciasComponent implements OnInit {
@@ -18,8 +19,6 @@ export class ExperienciasComponent implements OnInit {
   getExperiencias(){
     this.experienciaService.getExperiencia().subscribe((data: any) => {
       this.experiencias = data.experiencia
-
-      console.log(this.experiencias);
       
     })
   }

@@ -1,1 +1,59 @@
-<p>tecnologias works!</p>
+<div class="row" *ngIf="isLoaded">
+
+    <div class="col">
+
+
+        <div class="card">
+            <div class="card-body">
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Busca una tecnología" aria-label="Search" [(ngModel)]="filterText" (ngModelChange)="filtrarPalabra($event)" name="filtro">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" >Search</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="row" *ngIf="isLoaded">
+    <div class="col">
+
+        <div class="card">
+            <div class="card-body">
+
+                <table class="table" *ngIf="arrayFiltrado?.length > 0 else noEncontrado">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col" class="large">Conocimiento</th>
+                        <th scope="col" class="short">Cono.</th>
+                        <th scope="col" class="tipo">Tipo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let tec of arrayFiltrado">
+                        <td><i class="{{tec.imagen}}" style="font-size: 25px;"></i></td>
+                        <td>{{tec.nombre}}</td>
+                        <td>{{tec.puntuacion}}</td>
+                        <td class="tipo">{{tec.tipo}}</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <ng-template #noEncontrado>
+                    <h3>Oops, parece que no hemos encontrado la tecnología que buscabas</h3>
+                </ng-template>
+                
+                  
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
