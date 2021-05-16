@@ -13,8 +13,8 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class HeaderComponent implements OnInit {
 
-  correo: boolean = false
   usuario: Usuario
+  obj: object
   constructor(private usuarioService: UsuarioService, private emailService: EmailService) {
     this.getUsuario()
   }
@@ -27,13 +27,13 @@ export class HeaderComponent implements OnInit {
 
   onSub(email, name){
 
-    let obj = {
+    this.obj = {
       email: email,
       name: name
     }
-    this.emailService.postEmail(obj).subscribe( ( data ) =>{
+    this.emailService.postEmail(this.obj).subscribe( ( data ) =>{
       console.log(data);
-      this.correo = true
+      this.obj = null
       
     })
     

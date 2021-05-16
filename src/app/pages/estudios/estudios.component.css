@@ -1,16 +1,15 @@
-#imagen{
-    display: flex; 
-    align-items: center;
+h3{
+    font-size: 20px;
 }
 
+img{
+    width: 60px;
+    height: 60px;
+}
 
-@media screen and (max-width: 700px){
-    #imagen{
-        align-items: flex-start;
-        /* margin-right: 1px; */
+@media screen and (max-width: 500px){
+    h3{
+        font-size: 18px;
     }
-    img{
-        width: 40px;
-        height: 40px;
-    }
+    
 }

@@ -14,6 +14,8 @@ export class TecnologiasComponent implements OnInit {
   tecnologias: Tecnologia []
   filterText: string = ""
   isLoaded: boolean
+  labels: string[]
+  puntuaciones: number []
 
   arrayFiltrado: Tecnologia[]
   constructor(private tecnologiaService: TecnologiaService) { 
@@ -25,14 +27,21 @@ export class TecnologiasComponent implements OnInit {
       this.arrayFiltrado = this.tecnologias
       this.isLoaded = true
 
-      console.log(this.tecnologias);
+      this.labels = this.arrayFiltrado.map(tec => tec.nombre)
+      this.puntuaciones = this.arrayFiltrado.map( tec => tec.puntuacion)
       
+      this.puntuaciones.push(0,10)
     })
   }
 
   filtrarPalabra(text){
     
-    this.arrayFiltrado = this.tecnologias.filter( tec => tec.nombre.toLowerCase().includes(text) )    
+    this.arrayFiltrado = this.tecnologias.filter( tec => tec.nombre.toLowerCase().includes(text) )  
+    this.labels = this.arrayFiltrado.map(tec => tec.nombre)
+
+    this.puntuaciones = this.arrayFiltrado.map( tec => tec.puntuacion)  
+    this.puntuaciones.push(0,10)
+
   }
 
   ngOnInit(): void {

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ExperienciaService {
 
-  private url = 'http://localhost:3000/api/experiencias' 
+  private url = 'http://cvbackapp-env.eba-mmkxzmdf.eu-west-3.elasticbeanstalk.com/api/experiencias' 
   constructor(private http: HttpClient) { }
 
   getExperiencia (){

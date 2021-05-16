@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProyectoService {
 
-  private url = 'http://localhost:3000/api/proyectos' 
+  private url = 'http://cvbackapp-env.eba-mmkxzmdf.eu-west-3.elasticbeanstalk.com/api/proyectos' 
   constructor(private http: HttpClient) { }
 
   getProyectos (){

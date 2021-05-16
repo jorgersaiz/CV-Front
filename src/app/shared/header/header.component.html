@@ -30,7 +30,7 @@
             <!-- toggle and nav items -->
             <!-- ============================================================== -->
             <ul class="navbar-nav mr-auto">
-                <!-- This is  -->
+
                 <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" ><i class="ti-menu"></i></a> </li>
                 <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" ><i class="ti-menu"></i></a> </li>
                 <li class="nav-item hidden-sm-down"></li>
@@ -42,7 +42,7 @@
                 <!-- ============================================================== -->
                 <!-- Comment -->
                 <!-- ============================================================== -->
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-message"></i>
                         <div class="notify"> 
                             <span class="heartbit"></span> 
@@ -56,7 +56,6 @@
                             </li>
                             <li>
                                 <div class="message-center">
-                                    <!-- Message -->
                                     <a href="#">
                                         <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
                                         <div class="mail-contnet">
@@ -65,7 +64,7 @@
                                             <span class="time">9:30 AM</span> 
                                         </div>
                                     </a>
-                                    <!-- Message -->
+                                    
                                     <a href="#">
                                         <div class="btn btn-success btn-circle"><i class="ti-calendar"></i></div>
                                         <div class="mail-contnet">
@@ -74,7 +73,7 @@
                                             <span class="time">9:10 AM</span> 
                                         </div>
                                     </a>
-                                    <!-- Message -->
+                                    
                                     <a href="#">
                                         <div class="btn btn-info btn-circle"><i class="ti-settings"></i></div>
                                         <div class="mail-contnet">
@@ -83,7 +82,7 @@
                                             <span class="time">9:08 AM</span> 
                                         </div>
                                     </a>
-                                    <!-- Message -->
+                                    
                                     <a href="#">
                                         <div class="btn btn-primary btn-circle"><i class="ti-user"></i></div>
                                         <div class="mail-contnet">
@@ -99,7 +98,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <!-- ============================================================== -->
                 <!-- End Comment -->
                 <!-- ============================================================== -->
@@ -107,7 +106,9 @@
                 <!-- Messages -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-email"></i>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CV en PDF
+                        <i class="mdi mdi-email"></i>
                         <div class="notify"> 
                             <span class="heartbit"></span> 
                             <span class="point"></span> 
@@ -131,10 +132,11 @@
                                           <label for="inputName">Nombre completo</label>
                                           <input type="text" class="form-control form-control-sm" id="inputName" placeholder="Nombre completo" #name>
                                         </div>
-                                        <button type="button" class="btn btn-primary" (click)="onSub(email.value, name.value)">Enviar</button>
-                                        <div class="spinner-border" role="status" *ngIf="correo == false">
-                                            <span class="sr-only">Loading...</span>
-                                        </div>
+                                        
+                                        <button class="btn btn-primary" type="button" (click)="onSub(email.value, name.value)">
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="obj != null"></span>
+                                            Enviar
+                                        </button>
                                     </form>
                                 </div>
                             </li>
@@ -180,14 +182,14 @@
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a routerLink="experiencias"><i class="ti-briefcase"></i> Experiencia Laboral</a></li>
-                            <li><a routerLink="estudios"><i class="ti-bookmark-alt"></i> Estudios</a></li>
-                            <li><a routerLink="tecnologias"><i class="ti-rocket"></i> Tecnologías</a></li>
-                            <li><a routerLink="proyectos"><i class="ti-archive"></i> Proyectos</a></li>
+                            <li><a routerLink="experiencias"><i class="fas fa-briefcase"></i> Experiencia Laboral</a></li>
+                            <li><a routerLink="estudios"><i class="fas fa-graduation-cap"></i> Estudios</a></li>
+                            <li><a routerLink="tecnologias"><i class="fas fa-rocket"></i> Tecnologías</a></li>
+                            <li><a routerLink="proyectos"><i class="fas fa-folder-open"></i> Proyectos</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a routerLink="account-settings"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li><a routerLink="account-settings"><i class="fas fa-cog"></i> Account Setting</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a routerLink="/login"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a routerLink="/login"><i class="fas fa-power-off"></i> Logout</a></li>
                         </ul>
                     </div>
                 </li>

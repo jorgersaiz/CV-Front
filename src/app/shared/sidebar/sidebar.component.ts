@@ -26,6 +26,19 @@ export class SidebarComponent implements OnInit {
       
     })
   }
+
+  hideClass(){
+    if(document.getElementById("collapseOne").classList.contains("show")){
+      document.getElementById("collapseOne").classList.remove("show")
+      console.log("tiene");
+      
+    } else {
+      document.getElementById("collapseOne").classList.add("show")
+      console.log("No tiene");
+
+    }
+  }
+
   ngOnInit(): void {
   }
 

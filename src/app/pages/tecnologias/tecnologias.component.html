@@ -16,7 +16,7 @@
     </div>
 </div>
 
-
+<!-- 
 <div class="row" *ngIf="isLoaded">
     <div class="col">
 
@@ -56,4 +56,19 @@
 
 
 </div>
+ -->
 
+
+ <div class="row" *ngIf="isLoaded">
+
+    <div class="col">
+
+
+        <app-doughnut
+        [type]="'bar'"
+        [title]="'Comparación de tecnologías'"
+        [data]="puntuaciones"
+        [labels]="labels"
+        ></app-doughnut>
+    </div>
+</div>

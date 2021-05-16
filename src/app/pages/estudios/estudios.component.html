@@ -1,36 +1,29 @@
-<div *ngFor="let estudio of estudios">
+<div class="row" >
 
-    <div class="row">
+    <div class="col-12" *ngFor="let estudio of estudios">
 
-        <div class="card" style="width: 100%;">
+        <div class="card" >
 
             <div class="card-body" >
-                <div class="row">
+                
+                <div >
+                    <div class="col-2">
 
-                    <div class="col-2" id="imagen">
                         <img src="{{estudio?.imagen}}" alt="">
                     </div>
-
                     <div class="col-10">
-                        <div class="row">
-                            <h3>{{estudio?.escuela}} - {{estudio?.titulo}}&nbsp;&nbsp;</h3>
-                            <h3 style="font-size: 12px;">{{estudio?.fechaInicio | date}} - {{estudio?.fechaFin | date}}  ({{estudio?.tiempoTotal}})</h3>
+                        <h3 >{{estudio?.escuela}} - {{estudio?.titulo}}&nbsp;&nbsp;
+                            <span style="font-size: 10px;">{{estudio?.fechaInicio | date}} - {{estudio?.fechaFin | date}}  ({{estudio?.tiempoTotal}})</span>
+                        </h3>
+                        
 
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col" >
-
-                                <ul *ngFor="let desc of estudio?.descripcion">
-                                    <li>{{desc}}</li>
-                                </ul>
-
-                            </div>
-                        </div>
+                        <ul *ngFor="let desc of estudio?.descripcion">
+                            <li>{{desc}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>

@@ -8,8 +8,11 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="user-profile">
-                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><img src="{{usuario?.imagen}}" alt="user" /><span class="hide-menu">{{usuario?.nombre}} {{usuario?.apellidos}}</span></a>
-                    <ul aria-expanded="false" class="collapse">
+                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false" >
+                        <img src="{{usuario?.imagen}}" alt="user" />
+                        <span class="hide-menu">{{usuario?.nombre}} {{usuario?.apellidos}}</span>
+                    </a>
+                    <ul id="collapseOne" aria-expanded="false" class="collapse">
                         <li><a routerLink="/dashboard">Resumen </a></li>
                         <li><a routerLink="experiencias">Experiencia Laboral </a></li>
                         <li><a routerLink="estudios">Estudios</a></li>
@@ -20,7 +23,7 @@
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
-                <li class="nav-small-cap">PERSONAL</li>
+                <!-- <li class="nav-small-cap">PERSONAL</li>
                 <li *ngFor="let item of menuItems"> 
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                         <i class="mdi mdi-gauge"></i>
@@ -31,7 +34,7 @@
                     <ul aria-expanded="false" class="collapse" *ngFor="let submenu of item.submenu">
                         <li><a routerLink="{{submenu.url}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{submenu.titulo}} </a></li>
                     </ul>
-                </li>
+                </li> -->
                 
             </ul>
         </nav>
