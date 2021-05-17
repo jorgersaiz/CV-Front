@@ -17,7 +17,7 @@ export class BreadcrumbsComponent implements OnDestroy{
     this.subscriber$ = this.getArgumentosRuta().subscribe( data => {
       
       this.titulo = data.titulo
-      document.title = `AdminPro - ${this.titulo}`
+      document.title = `Jorge CV - ${this.titulo}`
       
     })
   }

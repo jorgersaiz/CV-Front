@@ -8,16 +8,18 @@
 
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Busca una tecnología" aria-label="Search" [(ngModel)]="filterText" (ngModelChange)="filtrarPalabra($event)" name="filtro">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" >Search</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="switcher()" id="switch">Formato gráfica</button>
                 </form>
             </div>
 
         </div>
     </div>
+
+    
 </div>
 
-<!-- 
-<div class="row" *ngIf="isLoaded">
+
+<div class="row" *ngIf="isLoaded" [style.display]="tabla" id="tabla">
     <div class="col">
 
         <div class="card">
@@ -56,10 +58,10 @@
 
 
 </div>
- -->
 
 
- <div class="row" *ngIf="isLoaded">
+
+ <div class="row" *ngIf="isLoaded" [style.display]="grafica" id="grafica">
 
     <div class="col">
 
@@ -69,6 +71,7 @@
         [title]="'Comparación de tecnologías'"
         [data]="puntuaciones"
         [labels]="labels"
+        
         ></app-doughnut>
     </div>
 </div>

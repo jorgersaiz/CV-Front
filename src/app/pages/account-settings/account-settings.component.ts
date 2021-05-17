@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
@@ -7,13 +7,9 @@ import { SettingsService } from 'src/app/services/settings.service';
   styles: [
   ]
 })
-export class AccountSettingsComponent implements OnInit {
+export class AccountSettingsComponent {
 
   constructor(private settingsService: SettingsService) { }
-
-  ngOnInit(): void {
-
-  }
 
   changeColor(color: string){
 

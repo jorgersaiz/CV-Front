@@ -11,4 +11,16 @@
         display: block;
     }
 
+    #switch{
+        display: none;
+    }
+
+    #tabla{
+        display: block;
+    }
+
+    #grafica{
+        display: none;
+    }
+
 }

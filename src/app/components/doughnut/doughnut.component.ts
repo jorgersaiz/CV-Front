@@ -19,7 +19,7 @@ export class DoughnutComponent implements OnInit {
 
   
   
-  public colors: Color[] = [
+  @Input() colors: Color[] = [
     {backgroundColor: ['#6857E6', '#009FEE', '#F02059']}
   ]
   constructor() { }

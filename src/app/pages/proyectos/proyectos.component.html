@@ -5,10 +5,18 @@
             <div class="card-body">
                 <h5 class="card-title">{{proyecto.titulo}}</h5>
                 <p class="card-text">{{proyecto.descripcion}}</p>
-                <a href="{{proyecto.github[0]}}" class="btn btn-outline-dark">
+                <button href="{{proyecto.github[0]}}" class="btn btn-outline-dark" *ngIf="proyecto.github[0] != 'Proximamente' else prox">
                     <i class="fab fa-github" style="font-size: 20px;"></i> 
                     Link a GitHub
-                </a>
+                </button>
+
+                <ng-template #prox>
+                    <button href="{{proyecto.github[0]}}" class="btn btn-outline-dark" disabled>
+                        <i class="fab fa-github" style="font-size: 20px;"></i> 
+                        {{proyecto.github[0]}}
+                    </button>
+                </ng-template>
+                
             </div>
         </div>
     </div>
