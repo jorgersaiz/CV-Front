@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailService {
 
-  private url = 'https://apijorge.com/api/email' 
+  private url = 'https://jorgeapi.com/api/email' 
   constructor(private http: HttpClient) { }
 
   postEmail (user){

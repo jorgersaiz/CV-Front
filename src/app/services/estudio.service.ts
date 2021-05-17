@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EstudioService {
 
-  private url = 'https://apijorge.com/api/estudios' 
+  private url = 'https://jorgeapi.com/api/estudios' 
   constructor(private http: HttpClient) { }
 
   getEstudios (){

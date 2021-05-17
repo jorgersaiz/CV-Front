@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProyectoService {
 
-  private url = 'https://apijorge.com/api/proyectos' 
+  private url = 'https://jorgeapi.com/api/proyectos' 
   constructor(private http: HttpClient) { }
 
   getProyectos (){

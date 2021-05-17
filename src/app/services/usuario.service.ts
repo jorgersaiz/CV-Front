@@ -7,7 +7,7 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-  private url = 'https://apijorge.com/api/usuarios'
+  private url = 'https://jorgeapi.com/api/usuarios'
   constructor(private http: HttpClient) { }
 
   getUsuario (){
