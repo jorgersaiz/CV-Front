@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EstudioService {
 
-  private url = 'http://cvbackapp-env.eba-mmkxzmdf.eu-west-3.elasticbeanstalk.com/api/estudios' 
+  private url = 'https://apijorge.com/api/estudios' 
   constructor(private http: HttpClient) { }
 
   getEstudios (){

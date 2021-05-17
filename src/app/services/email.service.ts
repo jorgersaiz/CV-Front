@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailService {
 
-  private url = 'http://cvbackapp-env.eba-mmkxzmdf.eu-west-3.elasticbeanstalk.com/api/email' 
+  private url = 'https://apijorge.com/api/email' 
   constructor(private http: HttpClient) { }
 
   postEmail (user){

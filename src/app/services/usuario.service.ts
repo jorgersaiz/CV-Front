@@ -7,7 +7,7 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-  private url = 'http://cvbackapp-env.eba-mmkxzmdf.eu-west-3.elasticbeanstalk.com/api/usuarios'
+  private url = 'https://apijorge.com/api/usuarios'
   constructor(private http: HttpClient) { }
 
   getUsuario (){
