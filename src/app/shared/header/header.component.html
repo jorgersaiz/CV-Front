@@ -52,22 +52,35 @@
                                 <div class="drop-title">Recibe mi CV en PDF</div>
                             </li>
                             <li>
-                                <div class="message-center">
+                                <div class="message-center" style="height: fit-content;">
                                     
                                     <form class="col" style="margin-bottom: 15px; margin-top: 15px;">
                                         <div class="form-group">
                                           <label for="inputEmail">Email</label>
                                           <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="Email" #email>
                                           <small id="emailHelp" class="form-text text-muted" style="font-size: 10px;">Tu email no se guardará en ninguna base de datos ni recibirás spam de ningún tipo.</small>
-                                        </div>
-                                        <div class="form-group">
+                                          
                                           <label for="inputName">Nombre completo</label>
                                           <input type="text" class="form-control form-control-sm" id="inputName" placeholder="Nombre completo" #name>
+                                        
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="figure img-text">
+                                                <input type="checkbox" value="Spanish" id="spa" #spa>
+                                                <i class="flag-icon flag-icon-es" style="font-size: 30px;" (click)="marcar(spa.value)"></i>
+                                            </label>
+    
+                                            <label class="figure img-text">
+                                                <input type="checkbox" value="English" id="eng" #eng>
+                                                <i class="flag-icon flag-icon-us" style="font-size: 30px;" (click)="marcar(eng.value)"></i>
+                                            </label>
+
                                         </div>
                                         
                                         <button class="btn btn-primary" type="button" (click)="onSub(email.value, name.value)">
                                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="obj != null"></span>
-                                            Enviar
+                                            Solicitar
                                         </button>
                                     </form>
                                 </div>
@@ -101,7 +114,7 @@
                                     <div class="u-text">
                                         <h4>{{usuario?.nombre}} {{usuario?.apellidos}}</h4>
                                         <p class="text-muted">{{usuario?.email}}</p>
-                                        <a routerLink="/dashboard" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                                        <a routerLink="/dashboard" class="btn btn-rounded btn-danger btn-sm">Ver perfil</a>
                                     </div>
                                 </div>
                             </li>
@@ -111,7 +124,7 @@
                             <li><a routerLink="tecnologias"><i class="fas fa-rocket"></i> Tecnologías</a></li>
                             <li><a routerLink="proyectos"><i class="fas fa-folder-open"></i> Proyectos</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a routerLink="account-settings"><i class="fas fa-cog"></i> Account Setting</a></li>
+                            <li><a routerLink="account-settings"><i class="fas fa-cog"></i> Ajustes</a></li>
                             <!-- <li role="separator" class="divider"></li> -->
                             <!-- <li><a routerLink="/login"><i class="fas fa-power-off"></i> Logout</a></li> -->
                         </ul>

@@ -15,7 +15,7 @@ const routes: Routes = [
         path: 'dashboard', 
         component: PagesComponent,
         children: [
-          { path: '', component: DashboardComponent, data: {titulo : "Resumen"}},  
+          { path: '', component: DashboardComponent},  
           { path: 'account-settings', component: AccountSettingsComponent, data: {titulo : "Account-Settings"}},
           { path: 'tecnologias', component: TecnologiasComponent, data: {titulo : "Tecnologías"}},
           { path: 'experiencias', component: ExperienciasComponent, data: {titulo : "Experiencia Laboral"}},

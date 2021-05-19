@@ -7,22 +7,16 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
+                <li class="waves-effect waves-dark myRow" routerLink="/dashboard">
+                    <img src="{{usuario?.imagen}}"/>
+                    <h5 id="name">{{usuario?.nombre}} {{usuario?.apellidos}}</h5>
+                </li>
                 <li class="user-profile">
-                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false" >
-                        <img src="{{usuario?.imagen}}" alt="user" />
-                        <span class="hide-menu">{{usuario?.nombre}} {{usuario?.apellidos}}</span>
-                    </a>
-                    <ul id="collapseOne" aria-expanded="false" class="collapse">
-                        <li><a routerLink="/dashboard">Resumen </a></li>
-                        <li><a routerLink="experiencias">Experiencia Laboral </a></li>
-                        <li><a routerLink="estudios">Estudios</a></li>
-                        <li><a routerLink="tecnologias">Tecnologías</a></li>
-                        <li><a routerLink="proyectos">Proyectos</a></li>
-                        <li><a routerLink="account-settings">Account Setting</a></li>
-                        <!-- <li><a routerLink="/login">Logout</a></li> -->
+                    <ul aria-expanded="false" class="show" *ngFor="let submenu of menuItems">
+                        <li><a routerLink="{{submenu.url}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{submenu.titulo}} </a></li>
                     </ul>
                 </li>
-                <li class="nav-devider"></li>
+                <!-- <li class="nav-devider"></li> -->
                 <!-- <li class="nav-small-cap">PERSONAL</li>
                 <li *ngFor="let item of menuItems"> 
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">

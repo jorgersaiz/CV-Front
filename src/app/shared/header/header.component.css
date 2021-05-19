@@ -7,6 +7,24 @@ label{
     font-size: 25px;
 }
 
+/* HIDE RADIO */
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  input[type="checkbox"] + i {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  input[type="checkbox"]:checked + i {
+    outline: 4px solid #7460ee;
+  }
+
 @media screen and (max-width: 800px){
 
 

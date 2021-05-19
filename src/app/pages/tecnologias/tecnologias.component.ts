@@ -13,33 +13,14 @@ import { TecnologiaService } from 'src/app/services/tecnologia.service';
 export class TecnologiasComponent implements OnInit {
 
   tecnologias: Tecnologia []
-  filterText: string = ""
   isLoaded: boolean
   labels: string[]
   puntuaciones: number []
   grafica: string = "none"
   tabla: string = "block"
 
-  colors: Color[] = [
-    {backgroundColor: []}
-  ]
-
   arrayFiltrado: Tecnologia[]
   constructor(private tecnologiaService: TecnologiaService) { 
-  }
-
-  generarColores(){
-    
-    let colores = []
-    for (let tec of this.tecnologias){
-      const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-      colores.push(randomColor);
-    }
-
-    this.colors[0].backgroundColor = colores
-      
-    
-
   }
   
 
@@ -51,20 +32,15 @@ export class TecnologiasComponent implements OnInit {
 
       this.labels = this.arrayFiltrado.map(tec => tec.nombre)
       this.puntuaciones = this.arrayFiltrado.map( tec => tec.puntuacion)
-
-      this.generarColores()
-
-      
-      
       this.puntuaciones.push(0,10)
     })
   }
 
-  filtrarPalabra(text){
+  filtrarPalabra(text: string){
     
-    this.arrayFiltrado = this.tecnologias.filter( tec => tec.nombre.toLowerCase().includes(text) )  
+    this.arrayFiltrado = this.tecnologias.filter( tec => tec.nombre.toLowerCase().startsWith(text.toLowerCase()) )  
+  
     this.labels = this.arrayFiltrado.map(tec => tec.nombre)
-
     this.puntuaciones = this.arrayFiltrado.map( tec => tec.puntuacion)  
     this.puntuaciones.push(0,10)
 
