@@ -16,7 +16,12 @@ export class BreadcrumbsComponent implements OnDestroy{
   constructor(private router: Router) {
     this.subscriber$ = this.getArgumentosRuta().subscribe( data => {
       
-      this.titulo = data.titulo
+      if(data.titulo == undefined){
+        this.titulo = "Resumen"
+      } else {
+        this.titulo = data.titulo
+
+      }
       document.title = `Jorge CV - ${this.titulo}`
       
     })
